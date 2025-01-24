@@ -1,9 +1,9 @@
-FROM python:3.11-slim
+FROM python:3.12-slim
 
-MAINTAINER ShinseiTom
+MAINTAINER KatawaJoJo
 
 # for updating in the future
-ARG ARCHIPELAGO_VERSION="0.4.5"
+ARG ARCHIPELAGO_VERSION="0.5.1.Hotfix1"
 ARG ARCHIPELAGO_URL="https://github.com/ArchipelagoMW/Archipelago/archive/refs/tags/"
 
 # I don't need pip yelling at me
@@ -32,7 +32,7 @@ WORKDIR /temp
 # then runs archipelago's setup script and a mini-script I made with the important
 # parts of the WebHost.py file that installs more dependencies
 RUN apt update && \
-    apt install curl git python3-tk -y && \
+    apt install curl git python3-tk build-essential -y && \
     apt clean && \
     chmod +x /go.sh && \
     curl -L $ARCHIPELAGO_URL$ARCHIPELAGO_VERSION".tar.gz" > "Archipelago-"$ARCHIPELAGO_VERSION".tar.gz" && \
