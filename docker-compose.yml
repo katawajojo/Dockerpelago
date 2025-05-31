@@ -1,0 +1,18 @@
+version: "3.8"
+
+networks:
+  archipelago:
+    external: false
+
+services:
+  archipelago:
+    image: ghcr.io/katawajojo/dockerpelago:main
+    container_name: archipelago
+    ports:
+      - "80:80"
+    networks:
+      - archipelago
+    volumes:
+      - ./archipelago:/archipelago
+      - ./archipelago/baseroms:/baseroms
+      - ./archipelago/custom_worlds:/custom_worlds
