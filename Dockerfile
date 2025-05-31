@@ -3,7 +3,7 @@ FROM python:3.12-slim
 MAINTAINER KatawaJoJo
 
 # for updating in the future
-ARG ARCHIPELAGO_VERSION="0.5.1.Hotfix1"
+ARG ARCHIPELAGO_VERSION="0.6.1"
 ARG ARCHIPELAGO_URL="https://github.com/ArchipelagoMW/Archipelago/archive/refs/tags/"
 
 # I don't need pip yelling at me
@@ -16,6 +16,7 @@ EXPOSE 80
 
 # make all the base folders I need
 RUN mkdir -p baseroms && \
+    mkdir -p custom_worlds && \
     mkdir -p archipelago && \
 	mkdir -p temp/Archipelago-$ARCHIPELAGO_VERSION
 

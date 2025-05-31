@@ -12,6 +12,9 @@ cd /archipelago
 # copy base roms to the archipelago folder
 cp -r /baseroms/. "/archipelago/Archipelago-"$1
 
+# make symlink for custom worlds.
+rm -r "/archipelago/Archipelago-"$1"/custom_worlds"; ln -s /custom_worlds "/archipelago/Archipelago-"$1"/custom_worlds"
+
 # move to new folder
 cd "Archipelago-"$1
 
