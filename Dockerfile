@@ -1,9 +1,10 @@
+# check=skip=JSONArgsRecommended
 FROM python:3.12-slim
 
-MAINTAINER KatawaJoJo
+# MAINTAINER KatawaJoJo
 
 # for updating in the future
-ARG ARCHIPELAGO_VERSION="0.6.1"
+ARG ARCHIPELAGO_VERSION="0.6.2"
 ARG ARCHIPELAGO_URL="https://github.com/ArchipelagoMW/Archipelago/archive/refs/tags/"
 
 # I don't need pip yelling at me
