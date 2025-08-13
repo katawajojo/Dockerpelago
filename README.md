@@ -1,6 +1,8 @@
 # Dockerpelago
 #### Fork of [ArchipelagoDocker](https://www.github.com/shinseitom/ArchipelagoDocker) maintained by KatawaJoJo
 ---
+> ### UPDATE: As of Archipelago v0.6.3, a docker image as well as docker-compose documentation has been added to the core project. Therefore, I will be archiving this project.
+
 Targeting Archipelago version 0.6.2
 
 The included `docker-compose.yml` is useful as a starting off point to implement it into your current docker deployments. <br>
